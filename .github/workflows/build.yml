@@ -173,7 +173,6 @@ jobs:
           ./src/sing-box-files/refilter/ruleset-ip-refilter_ipsum.json \
           --title "$RELEASE_NAME" \
           --notes "This is the automatic $RELEASE_NAME creation." \
-#          --prerelease
           --latest 
           
       env:
