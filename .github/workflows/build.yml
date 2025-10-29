@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
   schedule:
-    - cron: '0 0 */6 * *' # Runs every 6th day at midnight UTC
+    - cron: '0 0 */7 * *' # Runs every 6th day at midnight UTC
 
 jobs:
   run-python-scripts:
@@ -147,12 +147,12 @@ jobs:
     - name: Set Release Name and Tag
       run: |
         # Define the date
-        CURRENT_DATE=$(date +%d-%m-%Y-%H-%M)
+        CURRENT_DATE=$(date +%d-%m--%Y-%H-%M)
         CURRENT_TAG=$(date +%d%m%Y%H%M%S)
         
       
         # Format the release name and tag
-        RELEASE_NAME="Release $CURRENT_DATE"
+        RELEASE_NAME="Release - $CURRENT_DATE"
         TAG_NAME="$CURRENT_TAG"
         
         # Export as environment variables
