@@ -147,13 +147,12 @@ jobs:
       run: |
         # Define the date
         CURRENT_DATE=$(date +%d-%m-%Y)
-        CURRENT_TAG=$(date +%d%m%Y)
-        CURRENT_TIME=$(date +%h-%m-%s)
+        CURRENT_TAG=$(date +%d%m%Y%H%M%S)
+        
       
         # Format the release name and tag
         RELEASE_NAME="Release $CURRENT_DATE"
         TAG_NAME="$CURRENT_TAG"
-        TIME_TIME="$CURRENT_TIME"
         
         # Export as environment variables
         echo "RELEASE_NAME=$RELEASE_NAME" >> $GITHUB_ENV
@@ -162,7 +161,7 @@ jobs:
 
     - name: Create Pre-release with gh CLI
       run: |
-        gh release create "$TAG_NAME , $TAG_TIME" \
+        gh release create "$TAG_NAME" \
           ./sum/output/domains_all.lst \
           ./sum/output/ipsum.lst \
           ./src/xray-geoip/output/dat/geoip.dat \
