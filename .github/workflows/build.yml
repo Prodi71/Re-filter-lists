@@ -174,7 +174,7 @@ jobs:
           --title "$RELEASE_NAME" \
           --notes "This is the automatic $RELEASE_NAME creation." \
           --prerelease
-          --latest 
+#          --latest 
           
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
