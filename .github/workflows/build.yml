@@ -148,7 +148,8 @@ jobs:
         # Define the date
         CURRENT_DATE=$(date +%d-%m-%Y)
         CURRENT_TAG=$(date +%d%m%Y)
-
+        CURRENT_TIME=$(date +%h-%m-%s)
+      
         # Format the release name and tag
         RELEASE_NAME="Release $CURRENT_DATE"
         TAG_NAME="$CURRENT_TAG"
