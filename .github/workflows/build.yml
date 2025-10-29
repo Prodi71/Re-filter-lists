@@ -1,7 +1,8 @@
 name: Build domains_all, ipsum, XRay and Sing-Box Files
 
 on:
-  workflow_dispatch: # Allows manual trigger of the workflow
+  workflow_dispatch:
+  push:# Allows manual trigger of the workflow
   schedule:
     - cron: '0 0 */6 * *' # Runs every 6th day at midnight UTC
 
