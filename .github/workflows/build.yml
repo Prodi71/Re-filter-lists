@@ -147,8 +147,8 @@ jobs:
     - name: Set Release Name and Tag
       run: |
         # Define the date
-        CURRENT_DATE=$(date +%d-%m- %Y-%H-%M)
-        CURRENT_TAG=$(date +%d%m%Y%H%M%S)
+        CURRENT_DATE=$(date +%d-%m-%Y-%H-%M)
+        CURRENT_TAG=$(date +%d%m%Y%H%M)
         
       
         # Format the release name and tag
